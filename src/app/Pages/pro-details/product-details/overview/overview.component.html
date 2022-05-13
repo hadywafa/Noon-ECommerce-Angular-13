@@ -1,0 +1,66 @@
+<ng-container *ngIf="chSelectedProduct!.highlights.length >0">
+  <div id="overview">
+    <div class="fw-bold">Highlights</div>
+    <div>
+      <ul>
+        <ng-container *ngFor="let h of chSelectedProduct?.highlights">
+          <li>{{h.feature}}</li>
+        </ng-container>
+      </ul>
+    </div>
+  </div>
+</ng-container>
+<!-- Specifications -->
+<div id="specifications" class="container-fluid">
+  <div class="row">
+    <!-- table-1 -->
+    <div class="col-6">
+      <table class="table table-striped borderless">
+        <tbody>
+          <tr *ngIf="chSelectedProduct.specifications[0]">
+            <td>{{chSelectedProduct.specifications[0]?.key}}</td>
+            <td>{{chSelectedProduct.specifications[0]?.value}}</td>
+          </tr>
+          <tr *ngIf="chSelectedProduct.specifications[2]">
+            <td>{{chSelectedProduct.specifications[2]?.key}}</td>
+            <td>{{chSelectedProduct.specifications[2]?.value}}</td>
+          </tr>
+          <tr *ngIf="chSelectedProduct.specifications[4]">
+            <td>{{chSelectedProduct.specifications[4]?.key}}</td>
+            <td>{{chSelectedProduct.specifications[4]?.value}}</td>
+          </tr>
+          <tr *ngIf="chSelectedProduct.specifications[6]" class="text-muted opacity-75">
+            <td>{{chSelectedProduct.specifications[6]?.key}}</td>
+            <td>{{chSelectedProduct.specifications[6]?.value}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- table-2 -->
+    <div class="col-6">
+      <table class="col-6 table table-striped borderless">
+        <tbody>
+          <tr *ngIf="chSelectedProduct.specifications[1]">
+            <td>{{chSelectedProduct.specifications[1]?.key}}</td>
+            <td>{{chSelectedProduct.specifications[1]?.value}}</td>
+          </tr>
+          <tr *ngIf="chSelectedProduct.specifications[3]">
+            <td>{{chSelectedProduct.specifications[3]?.key}}</td>
+            <td>{{chSelectedProduct.specifications[3]?.value}}</td>
+          </tr>
+          <tr *ngIf="chSelectedProduct.specifications[5]">
+            <td>{{chSelectedProduct.specifications[5]?.key}}</td>
+            <td>{{chSelectedProduct.specifications[5]?.value}}</td>
+          </tr>
+          <tr *ngIf="chSelectedProduct.specifications[7]" class="text-muted opacity-75">
+            <td>{{chSelectedProduct.specifications[7]?.key}}</td>
+            <td>{{chSelectedProduct.specifications[7]?.value}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div *ngIf="chSelectedProduct.specifications.length >=8" class="text-center fs-6 w-100">
+      <span class="viewFullSpecifications" (click)="goFullSpecDetailsHandler()">View Full Specifications</span>
+    </div>
+  </div>
+</div>

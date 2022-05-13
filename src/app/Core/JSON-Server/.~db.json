@@ -1,0 +1,775 @@
+{
+  "users": [
+    {
+      "id": "u1",
+      "FirstName": "firstuser1",
+      "LastName": "laststuser1",
+      "email": "user1@gmail.com",
+      "password": "user1234",
+      "IsActive": true,
+      "Balance": 37377,
+      "role": "lastuser2",
+      "phone": "01003875982",
+      "Address": [
+        {
+          "address": "sohage",
+          "default": true
+        },
+        {
+          "address": "assuit",
+          "default": false
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "FirstName": "kerolosss",
+      "LastName": "sadkihdhdh",
+      "email": "user1@gmail.com",
+      "password": "user5",
+      "IsActive": true,
+      "Balance": 66006,
+      "role": "firstuser1",
+      "phone": "01175894384",
+      "Address": [
+        {
+          "id": 1,
+          "address": "sohage",
+          "default": false
+        },
+        {
+          "id": 2,
+          "address": "assuit",
+          "default": false
+        },
+        {
+          "id": 3,
+          "address": "asswan",
+          "default": false
+        },
+        {
+          "id": 4,
+          "address": "qena",
+          "default": false
+        },
+        {
+          "id": 5,
+          "address": "kskdk",
+          "default": false
+        },
+        {
+          "id": 6,
+          "address": "kdjjdfjfj",
+          "default": true
+        }
+      ]
+    }
+  ],
+  "Categories": [
+    {
+      "id": 1,
+      "name": "ELECTRONICS",
+      "nameAr": "اليكترونيات"
+    },
+    {
+      "id": 2,
+      "name": "Mobiles",
+      "nameAr": "موبيلات"
+    },
+    {
+      "id": 3,
+      "name": "MEN",
+      "nameAr": "رجالية"
+    },
+    {
+      "id": 4,
+      "name": "WOMEN",
+      "nameAr": "نسائية"
+    },
+    {
+      "id": 5,
+      "name": "HOME",
+      "nameAr": "المنزل"
+    },
+    {
+      "id": 6,
+      "name": "BEAUTY & HEALTH",
+      "nameAr": "الجمال والصحة"
+    },
+    {
+      "id": 7,
+      "name": "BABY & TOYS",
+      "nameAr": "الاطفال والعطور"
+    },
+    {
+      "id": 8,
+      "name": "SUPERMARKET",
+      "nameAr": "سوبر ماركت"
+    }
+  ],
+  "SubCategories": [
+    {
+      "id": 1,
+      "name": "TVs",
+      "nameAr": "تليفزيونات",
+      "mainCatId": 1
+    },
+    {
+      "id": 2,
+      "name": "Laptops",
+      "nameAr": "اجهزة اللابتوب",
+      "mainCatId": 1
+    },
+    {
+      "id": 3,
+      "name": "Video Games",
+      "nameAr": "ألعاب الفيديو",
+      "mainCatId": 1
+    },
+    {
+      "id": 4,
+      "name": "Data Storage",
+      "nameAr": "تخزين الداتا",
+      "mainCatId": 1
+    },
+    {
+      "id": 5,
+      "name": "Samsung",
+      "mainCatId": 2
+    },
+    {
+      "id": 6,
+      "name": "Apple",
+      "mainCatId": 2
+    },
+    {
+      "id": 7,
+      "name": "Oppo",
+      "mainCatId": 2
+    },
+    {
+      "id": 8,
+      "name": "Nokia",
+      "mainCatId": 2
+    },
+    {
+      "id": 9,
+      "Name": "Adidas",
+      "mainCatId": 3
+    },
+    {
+      "id": 10,
+      "name": "Nike",
+      "mainCatId": 3
+    },
+    {
+      "id": 11,
+      "name": "Puma",
+      "mainCatId": 3
+    },
+    {
+      "id": 12,
+      "name": "Mango",
+      "mainCatId": 4
+    },
+    {
+      "id": 13,
+      "name": "Only",
+      "mainCatId": 4
+    },
+    {
+      "id": 14,
+      "name": "Shoes",
+      "mainCatId": 4
+    },
+    {
+      "id": 15,
+      "name": "Jewellery",
+      "mainCatId": 4
+    },
+    {
+      "id": 16,
+      "name": "Tornado",
+      "mainCatId": 5
+    },
+    {
+      "id": 17,
+      "name": "Toshiba",
+      "mainCatId": 5
+    },
+    {
+      "id": 18,
+      "name": "Fresh",
+      "mainCatId": 5
+    },
+    {
+      "id": 19,
+      "name": "Philips",
+      "mainCatId": 5
+    },
+    {
+      "id": 20,
+      "name": "Makeup",
+      "mainCatId": 6
+    },
+    {
+      "id": 21,
+      "name": "Hair Care",
+      "mainCatId": 6
+    },
+    {
+      "id": 22,
+      "name": "Skin Care",
+      "mainCatId": 6
+    },
+    {
+      "id": 23,
+      "name": "Health & Nutrition",
+      "mainCatId": 6
+    },
+    {
+      "id": 24,
+      "name": "Toys",
+      "mainCatId": 7
+    },
+    {
+      "id": 25,
+      "name": "Baby Safety",
+      "mainCatId": 7
+    },
+    {
+      "id": 28,
+      "name": "Home Care & Cleaning",
+      "mainCatId": 8
+    },
+    {
+      "id": 29,
+      "name": "Snack Food",
+      "mainCatId": 8
+    },
+    {
+      "id": 30,
+      "name": "Breakfast Food",
+      "mainCatId": 8
+    },
+    {
+      "id": 31,
+      "name": "Candy & Chocolate",
+      "mainCatId": 8
+    }
+  ],
+  "Products": [
+    {
+      "id": 1,
+      "skuId": "N43630263V",
+      "skuString": "galaxy-a52s-5g-dual-sim-awesome-black-8gb-ram-128gb-middle-east-version",
+      "name": "Galaxy A52s 5G Dual SIM Awesome Black 8GB RAM 128GB - Middle East Version",
+      "nameAr": "سامسونج A52 الجيل الخامس بشريحتين اسود",
+      "modelNumber": "A52s",
+      "price": 8300,
+      "discount": 0.2,
+      "description": "Galaxy A52s 5G Dual SIM Awesome Black 8GB RAM 128GB - Middle East Version",
+      "descriptionAr": "موبايل جامد ",
+      "imageThumb": "https://z.nooncdn.com/products/tr:n-t_400/v1637257602/N50099853A_1.jpg",
+      "categoryId": 1,
+      "quantity": 100,
+      "maxQuantityPerOrder": 10,
+      "imagesGallary": [
+        "https://z.nooncdn.com/products/tr:n-t_80/v1637257602/N50099853A_1.jpg",
+        "https://z.nooncdn.com/products/tr:n-t_80/v1629953276/N50099853A_2.jpg",
+        "https://z.nooncdn.com/products/tr:n-t_80/v1629953276/N50099853A_3.jpg",
+        "https://z.nooncdn.com/products/tr:n-t_80/v1629953277/N50099853A_6.jpg",
+        "https://z.nooncdn.com/products/tr:n-t_80/v1629953276/N50099853A_7.jpg",
+        "https://z.nooncdn.com/products/tr:n-t_80/v1629953276/N50099853A_8.jpg",
+        "https://z.nooncdn.com/products/tr:n-t_80/v1629953276/N50099853A_9.jpg"
+      ],
+      "highlights": [
+        "Ceramic shield with four times better drop performance",
+        "A14 bionic is super efficient for great battery life",
+        "OLED delivers brighter brights, darker blacks and higher resolution for everything you look at",
+        "Wide camera brings in 27% more light",
+        "Facetime is available on the product & would be accessible in regions where facetime is permitted by telecom operators"
+      ],
+      "specifications": [
+        {
+          "key": "Model Number",
+          "value": "NERF02"
+        },
+        {
+          "key": "Model Name",
+          "value": "candle_lanterns-2"
+        },
+        {
+          "key": "Capacity",
+          "value": "None None"
+        },
+        {
+          "key": "Colour Name",
+          "value": "Orange"
+        },
+        {
+          "key": "Base Material",
+          "value": "Metal"
+        },
+        {
+          "key": "Base Material",
+          "value": "Metal"
+        },
+        {
+          "key": "Base Material",
+          "value": "Metal"
+        },
+        {
+          "key": "Base Material",
+          "value": "Metal"
+        },
+        {
+          "key": "Base Material",
+          "value": "Metal"
+        }
+      ],
+      "proCat": [
+        {
+          "id": 1,
+          "name": "TVs"
+        },
+        {
+          "id": 2,
+          "name": "Laptops"
+        },
+        {
+          "id": 3,
+          "name": "Video Games"
+        },
+        {
+          "id": 4,
+          "name": "Data Storage"
+        }
+      ],
+      "available": true,
+      "overallRating": 4.5,
+      "reviews": [
+        {}
+      ],
+      "brandId": 1,
+      "brandName": "Samsung",
+      "sellerName": "Noon",
+      "sellerId": "1"
+    },
+    {
+      "id": 2,
+      "skuId": "N43630263V",
+      "skuString": "galaxy-a52s-5g-dual-sim-awesome-black-8gb-ram-128gb-middle-east-version",
+      "name": "Galaxy A52s 5G Dual SIM Awesome Black 8GB RAM 128GB - Middle East Version",
+      "nameAr": "سامسونج A52 الجيل الخامس بشريحتين اسود",
+      "modelNumber": "A52s",
+      "price": 8300,
+      "discount": 0.2,
+      "description": "Galaxy A52s 5G Dual SIM Awesome Black 8GB RAM 128GB - Middle East Version",
+      "descriptionAr": "موبايل جامد ",
+      "imageThumb": "https://z.nooncdn.com/products/tr:n-t_400/v1637257602/N50099853A_1.jpg",
+      "categoryId": 1,
+      "quantity": 100,
+      "maxQuantityPerOrder": 10,
+      "imagesGallary": [
+        "https://z.nooncdn.com/products/tr:n-t_80/v1637257602/N50099853A_1.jpg",
+        "https://z.nooncdn.com/products/tr:n-t_80/v1629953276/N50099853A_2.jpg",
+        "https://z.nooncdn.com/products/tr:n-t_80/v1629953276/N50099853A_3.jpg",
+        "https://z.nooncdn.com/products/tr:n-t_80/v1629953277/N50099853A_6.jpg",
+        "https://z.nooncdn.com/products/tr:n-t_80/v1629953276/N50099853A_7.jpg",
+        "https://z.nooncdn.com/products/tr:n-t_80/v1629953276/N50099853A_8.jpg",
+        "https://z.nooncdn.com/products/tr:n-t_80/v1629953276/N50099853A_9.jpg"
+      ],
+      "highlights": [
+        "Ceramic shield with four times better drop performance",
+        "A14 bionic is super efficient for great battery life",
+        "OLED delivers brighter brights, darker blacks and higher resolution for everything you look at",
+        "Wide camera brings in 27% more light",
+        "Facetime is available on the product & would be accessible in regions where facetime is permitted by telecom operators"
+      ],
+      "specifications": [
+        {
+          "key": "Model Number",
+          "value": "NERF02"
+        },
+        {
+          "key": "Model Name",
+          "value": "candle_lanterns-2"
+        },
+        {
+          "key": "Capacity",
+          "value": "None None"
+        },
+        {
+          "key": "Colour Name",
+          "value": "Orange"
+        },
+        {
+          "key": "Base Material",
+          "value": "Metal"
+        },
+        {
+          "key": "Base Material",
+          "value": "Metal"
+        },
+        {
+          "key": "Base Material",
+          "value": "Metal"
+        },
+        {
+          "key": "Base Material",
+          "value": "Metal"
+        },
+        {
+          "key": "Base Material",
+          "value": "Metal"
+        }
+      ],
+      "proCat": [
+        {
+          "id": 1,
+          "name": "TVs"
+        },
+        {
+          "id": 2,
+          "name": "Laptops"
+        },
+        {
+          "id": 3,
+          "name": "Video Games"
+        },
+        {
+          "id": 4,
+          "name": "Data Storage"
+        }
+      ],
+      "available": true,
+      "overallRating": 4.5,
+      "reviews": [
+        {}
+      ],
+      "brandId": 1,
+      "brandName": "Samsung",
+      "sellerName": "Noon",
+      "sellerId": "1"
+    },
+    {
+      "id": 3,
+      "skuId": "N43630263V",
+      "skuString": "galaxy-a52s-5g-dual-sim-awesome-black-8gb-ram-128gb-middle-east-version",
+      "name": "Galaxy A52s 5G Dual SIM Awesome Black 8GB RAM 128GB - Middle East Version",
+      "nameAr": "سامسونج A52 الجيل الخامس بشريحتين اسود",
+      "modelNumber": "A52s",
+      "price": 8300,
+      "discount": 0.2,
+      "description": "Galaxy A52s 5G Dual SIM Awesome Black 8GB RAM 128GB - Middle East Version",
+      "descriptionAr": "موبايل جامد ",
+      "imageThumb": "https://z.nooncdn.com/products/tr:n-t_400/v1637257602/N50099853A_1.jpg",
+      "categoryId": 2,
+      "quantity": 100,
+      "maxQuantityPerOrder": 10,
+      "imagesGallary": [
+        "https://z.nooncdn.com/products/tr:n-t_80/v1637257602/N50099853A_1.jpg",
+        "https://z.nooncdn.com/products/tr:n-t_80/v1629953276/N50099853A_2.jpg",
+        "https://z.nooncdn.com/products/tr:n-t_80/v1629953276/N50099853A_3.jpg",
+        "https://z.nooncdn.com/products/tr:n-t_80/v1629953277/N50099853A_6.jpg",
+        "https://z.nooncdn.com/products/tr:n-t_80/v1629953276/N50099853A_7.jpg",
+        "https://z.nooncdn.com/products/tr:n-t_80/v1629953276/N50099853A_8.jpg",
+        "https://z.nooncdn.com/products/tr:n-t_80/v1629953276/N50099853A_9.jpg"
+      ],
+      "highlights": [
+        "Ceramic shield with four times better drop performance",
+        "A14 bionic is super efficient for great battery life",
+        "OLED delivers brighter brights, darker blacks and higher resolution for everything you look at",
+        "Wide camera brings in 27% more light",
+        "Facetime is available on the product & would be accessible in regions where facetime is permitted by telecom operators"
+      ],
+      "specifications": [
+        {
+          "key": "Model Number",
+          "value": "NERF02"
+        },
+        {
+          "key": "Model Name",
+          "value": "candle_lanterns-2"
+        },
+        {
+          "key": "Capacity",
+          "value": "None None"
+        },
+        {
+          "key": "Colour Name",
+          "value": "Orange"
+        },
+        {
+          "key": "Base Material",
+          "value": "Metal"
+        },
+        {
+          "key": "Base Material",
+          "value": "Metal"
+        },
+        {
+          "key": "Base Material",
+          "value": "Metal"
+        },
+        {
+          "key": "Base Material",
+          "value": "Metal"
+        },
+        {
+          "key": "Base Material",
+          "value": "Metal"
+        }
+      ],
+      "proCat": [
+        {
+          "id": 1,
+          "name": "TVs"
+        },
+        {
+          "id": 2,
+          "name": "Laptops"
+        },
+        {
+          "id": 3,
+          "name": "Video Games"
+        },
+        {
+          "id": 4,
+          "name": "Data Storage"
+        }
+      ],
+      "available": true,
+      "overallRating": 4.5,
+      "reviews": [
+        {}
+      ],
+      "brandId": 1,
+      "brandName": "Samsung",
+      "sellerName": "Noon",
+      "sellerId": "1"
+    },
+    {
+      "id": 4,
+      "skuId": "N43630263V",
+      "skuString": "galaxy-a52s-5g-dual-sim-awesome-black-8gb-ram-128gb-middle-east-version",
+      "name": "Galaxy A52s 5G Dual SIM Awesome Black 8GB RAM 128GB - Middle East Version",
+      "nameAr": "سامسونج A52 الجيل الخامس بشريحتين اسود",
+      "modelNumber": "A52s",
+      "price": 8300,
+      "discount": 0.2,
+      "description": "Galaxy A52s 5G Dual SIM Awesome Black 8GB RAM 128GB - Middle East Version",
+      "descriptionAr": "موبايل جامد فشخ",
+      "imageThumb": "https://z.nooncdn.com/products/tr:n-t_400/v1637257602/N50099853A_1.jpg",
+      "categoryId": 5,
+      "quantity": 100,
+      "maxQuantityPerOrder": 10,
+      "imagesGallary": [
+        {
+          "id": 1,
+          "imageName": "https://z.nooncdn.com/products/tr:n-t_80/v1637257602/N50099853A_1.jpg"
+        },
+        {
+          "id": 2,
+          "imageName": "https://z.nooncdn.com/products/tr:n-t_80/v1629953276/N50099853A_2.jpg"
+        },
+        {
+          "id": 3,
+          "imageName": "https://z.nooncdn.com/products/tr:n-t_80/v1629953276/N50099853A_3.jpg"
+        },
+        {
+          "id": 4,
+          "imageName": "https://z.nooncdn.com/products/tr:n-t_80/v1629953276/N50099853A_7.jpg"
+        },
+        {
+          "id": 5,
+          "imageName": "https://z.nooncdn.com/products/tr:n-t_80/v1629953276/N50099853A_8.jpg"
+        },
+        {
+          "id": 6,
+          "imageName": "https://z.nooncdn.com/products/tr:n-t_80/v1629953276/N50099853A_9.jpg"
+        }
+      ],
+      "highlights": [
+        {
+          "feature": "Ceramic shield with four times better drop performance"
+        },
+        {
+          "feature": "A14 bionic is super efficient for great battery life"
+        },
+        {
+          "feature": "OLED delivers brighter brights, darker blacks and higher resolution for everything you look at"
+        },
+        {
+          "feature": "Wide camera brings in 27% more light"
+        },
+        {
+          "feature": "Facetime is available on the product & would be accessible in regions where facetime is permitted by telecom operators"
+        }
+      ],
+      "specifications": [
+        {
+          "key": "Model Number",
+          "value": "NERF02"
+        },
+        {
+          "key": "Model Name",
+          "value": "candle_lanterns-2"
+        },
+        {
+          "key": "Capacity",
+          "value": "None None"
+        },
+        {
+          "key": "Colour Name",
+          "value": "Orange"
+        },
+        {
+          "key": "Base Material",
+          "value": "Metal"
+        },
+        {
+          "key": "Base Material",
+          "value": "Metal"
+        },
+        {
+          "key": "Base Material",
+          "value": "Metal"
+        },
+        {
+          "key": "Base Material",
+          "value": "Metal"
+        },
+        {
+          "key": "Base Material",
+          "value": "Metal"
+        }
+      ],
+      "proCat": [
+        {
+          "id": 1,
+          "name": "TVs"
+        },
+        {
+          "id": 2,
+          "name": "Laptops"
+        },
+        {
+          "id": 3,
+          "name": "Video Games"
+        },
+        {
+          "id": 4,
+          "name": "Data Storage"
+        }
+      ],
+      "available": true,
+      "overallRating": 4.5,
+      "reviews": [
+        {}
+      ],
+      "brandId": 1,
+      "brandName": "Samsung",
+      "sellerName": "Noon",
+      "sellerId": "1"
+    },
+    {
+      "id": 5,
+      "skuId": "N43630263V",
+      "skuString": "galaxy-a52s-5g-dual-sim-awesome-black-8gb-ram-128gb-middle-east-version",
+      "name": "Galaxy A52s 5G Dual SIM Awesome Black 8GB RAM 128GB - Middle East Version",
+      "nameAr": "سامسونج A52 الجيل الخامس بشريحتين اسود",
+      "modelNumber": "A52s",
+      "price": 8300,
+      "discount": 0.2,
+      "description": "Galaxy A52s 5G Dual SIM Awesome Black 8GB RAM 128GB - Middle East Version",
+      "descriptionAr": "موبايل جامد فشخ",
+      "imageThumb": "https://z.nooncdn.com/products/tr:n-t_400/v1637257602/N50099853A_1.jpg",
+      "categoryId": 5,
+      "quantity": 100,
+      "maxQuantityPerOrder": 10,
+      "imagesGallary": [
+        "https://z.nooncdn.com/products/tr:n-t_80/v1637257602/N50099853A_1.jpg",
+        "https://z.nooncdn.com/products/tr:n-t_80/v1629953276/N50099853A_2.jpg",
+        "https://z.nooncdn.com/products/tr:n-t_80/v1629953276/N50099853A_3.jpg",
+        "https://z.nooncdn.com/products/tr:n-t_80/v1629953277/N50099853A_6.jpg",
+        "https://z.nooncdn.com/products/tr:n-t_80/v1629953276/N50099853A_7.jpg",
+        "https://z.nooncdn.com/products/tr:n-t_80/v1629953276/N50099853A_8.jpg",
+        "https://z.nooncdn.com/products/tr:n-t_80/v1629953276/N50099853A_9.jpg"
+      ],
+      "highlights": [
+        "Ceramic shield with four times better drop performance",
+        "A14 bionic is super efficient for great battery life",
+        "OLED delivers brighter brights, darker blacks and higher resolution for everything you look at",
+        "Wide camera brings in 27% more light",
+        "Facetime is available on the product & would be accessible in regions where facetime is permitted by telecom operators"
+      ],
+      "specifications": [
+        {
+          "key": "Model Number",
+          "value": "NERF02"
+        },
+        {
+          "key": "Model Name",
+          "value": "candle_lanterns-2"
+        },
+        {
+          "key": "Capacity",
+          "value": "None None"
+        },
+        {
+          "key": "Colour Name",
+          "value": "Orange"
+        },
+        {
+          "key": "Base Material",
+          "value": "Metal"
+        },
+        {
+          "key": "Base Material",
+          "value": "Metal"
+        },
+        {
+          "key": "Base Material",
+          "value": "Metal"
+        },
+        {
+          "key": "Base Material",
+          "value": "Metal"
+        },
+        {
+          "key": "Base Material",
+          "value": "Metal"
+        }
+      ],
+      "proCat": [
+        {
+          "id": 1,
+          "name": "TVs"
+        },
+        {
+          "id": 2,
+          "name": "Laptops"
+        },
+        {
+          "id": 3,
+          "name": "Video Games"
+        },
+        {
+          "id": 4,
+          "name": "Data Storage"
+        }
+      ],
+      "available": true,
+      "overallRating": 4.5,
+      "reviews": [
+        {}
+      ],
+      "brandId": 1,
+      "brandName": "Samsung",
+      "sellerName": "Noon",
+      "sellerId": "1"
+    }
+  ]
+}

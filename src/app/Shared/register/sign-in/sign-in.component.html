@@ -1,0 +1,46 @@
+<div class="container-wrapper">
+  <h3 class="text-center"><i class="bi bi-person-circle ac-logo"></i>Welcome back!</h3>
+  <h3 class="login-text"><i class="bi bi-person-circle ac-logo"></i>Sign in to your account</h3>
+
+  <div class="ac">Don't have an Account? <span class="btn btn-link" (click)="goSignUp()">Sign Up</span></div>
+
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <!-- email -->
+    <div class="item">
+      <input
+        class="input"
+        type="text"
+        placeholder="Email"
+        formControlName="email"
+        [class.is-valid]="email?.valid"
+        [class.is-invalid]="email?.invalid"
+      />
+      <div [hidden]="email?.valid || email?.untouched" class="alert-hw alert-danger-hw">
+        <small *ngIf="email?.errors?.['required']">
+          Email is required
+        </small>
+        <small *ngIf="email?.errors?.['email']">
+          Not Vaild Email
+        </small>
+      </div>
+    </div>
+    <!-- password -->
+    <div class="item">
+      <input
+        class="input"
+        type="password"
+        placeholder="Password"
+        formControlName="password"
+        [class.is-valid]="password?.valid"
+        [class.is-invalid]="password?.invalid"
+      />
+      <div [hidden]="password?.valid || password?.untouched" class="alert-hw alert-danger-hw">
+        <small *ngIf="password?.errors?.['required']">
+          password is required
+        </small>
+      </div>
+    </div>
+    <div class="mt-4 text-center w-100"><a href="#">Forgot Password?</a></div>
+    <div class="item submit"><button type="submit">Log in</button></div>
+  </form>
+</div>

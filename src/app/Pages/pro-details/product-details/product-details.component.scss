@@ -1,0 +1,128 @@
+header {
+  background-color: rgb(82, 82, 209);
+  text-align: center;
+}
+footer {
+  background-color: rgb(124, 225, 81);
+  text-align: center;
+}
+button{
+  outline: none;
+
+}
+.icon {
+  width: 24px;
+  max-width: unset;
+  height: 24px;
+  max-height: unset;
+}
+.imgs-gallary {
+  width: 80px;
+  height: auto;
+  max-width: 100%;
+}
+.mybody {
+  height: 100vh;
+}
+.img-thumb {
+  min-width: 150px;
+}
+
+select {
+  background-color: #f8f7f7; /* Fallback color if gradients are not supported */
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Arrow-down.svg/1200px-Arrow-down.svg.png),
+    -ms-linear-gradient(top, #e5e5e5, #f4f4f4); /* For pre-releases of Internet Explorer  10*/
+  background-position: center right;
+  background-repeat: no-repeat;
+  border: 1px solid #aaa;
+  border-radius: 2px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+  color: #555;
+  font-size: inherit;
+  margin: 0;
+  overflow: hidden;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.like {
+  color: rgb(240, 236, 236);
+  width: 100%;
+  text-align: center;
+}
+.like:hover {
+  color: rgb(194, 106, 106);
+  cursor: pointer;
+}
+
+.inwishlist{
+  color: rgb(194, 106, 106);
+}
+.inwishlist:hover{
+  color: rgb(240, 236, 236);
+}
+.noonLink {
+  position: relative;
+  color: rgb(28, 95, 182);
+  cursor: pointer;
+  text-decoration: none;
+  //underline
+  // text-decoration: underline;
+
+  &:hover {
+    // color: rgb(31, 90, 127);
+    color: rgb(28, 95, 182);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    // background-color: #000;
+    background-color: rgb(28, 95, 182);
+    transform: scaleX(1);
+    transition: transform 0.3s ease;
+  }
+
+  &:hover::before {
+    transform: scaleX(0);
+  }
+}
+
+.arrowCat {
+  width: 10px;
+  max-width: unset;
+  height: 10px;
+  max-height: unset;
+}
+.infoLink {
+  color: rgb(28, 95, 182);
+  text-decoration: none;
+  font-weight: bold;
+  //add bottom border
+  border-bottom: 4px solid rgb(28, 95, 182);
+}
+
+#addToCart{
+  background-color: #2B4CD7;
+}
+
+#addToCart:hover{
+  background-color: #fff;
+  color: #2B4CD7;
+  border: 2px solid #2B4CD7;
+}
+
+#Quantity:hover{
+cursor: pointer;
+}
+
+#monthlyPayment{
+  padding: 1%;
+  margin-bottom: 50px;
+}

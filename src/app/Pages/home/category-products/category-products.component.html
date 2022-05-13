@@ -1,0 +1,65 @@
+<!-- <app-home-header></app-home-header> -->
+<div class="pop" id="pop">
+  <mat-spinner *ngIf="isspener"></mat-spinner>
+</div>
+<app-home-header (SearchTextCganged)="onSearchTextEnterd($event)"></app-home-header>
+
+<div class="container-fluid overflow-hidden" id="ProductList">
+  <div class="row">
+    <app-tree-categories class="col-3 bg-secondary h-100"></app-tree-categories>
+    <div class="container col-9">
+      <div class="row justify-content-around">
+        <a class="product-card colms-4"
+          *ngFor="let prd of Products |paginate:{itemsPerPage:productSize,currentPage:page,totalItems:count}; let i=index"
+          [routerLink]="['/egypt-en','p',prd?.id]">
+          <div>
+            <div class="product-tumb">
+              <img src="{{prd?.imageThumb}}" />
+            </div>
+
+            <div class="product-details">
+              <!-- <h5>{{localstorge=="en"?prd?.name:prd?.nameAr}}</h5> -->
+              <h5>{{(localstorge=="en"? prd.name:prd.nameArabic)|stringLength}}</h5>
+
+              <!-- <p>{{localstorge=="en"?prd?.description:prd?.descriptionAr}}</p> -->
+
+              <div class="">
+                <div class="product-bottom-details">
+                  <ng-container *ngIf="prd.discount==0;  else NoDicount">
+                    <span class="mb-5 fw-bold">
+                      {{prd.price | currency: "EGP ":"symbol"}}
+                    </span>
+                  </ng-container>
+
+                  <ng-template #NoDicount>
+                    <span class="fw-bold">
+                      {{prd.price | afterDiscountPrice:prd.discount |currency: "EGP ":"symbol"}}
+                    </span>
+
+                    <span class="text-success"> {{prd.discount*100}}% Off </span>
+                    <br />
+                    <span class="text-decoration-line-through fw-light"> {{prd.price|currency: "EGP ":"symbol"}} </span>
+                  </ng-template>
+                </div>
+
+                <div class="product-bottom-details">
+                  <ng-container [ngSwitch]="prd.quantity">
+                    <ng-container *ngSwitchCase="0"><span class="text-danger">Out Of stock</span> </ng-container>
+                    <ng-container *ngSwitchCase="1"> <span class="text-warning">Last item</span> </ng-container>
+                    <ng-container *ngSwitchCase="2"><span class="text-warning">Last two item</span></ng-container>
+                    <ng-container *ngSwitchDefault> <span class="mt-1">{{prd.quantity}} pieces</span></ng-container>
+                  </ng-container>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-12 page d-flex flex-row justify-content-center align-content-center px-1 mx-0">
+      <pagination-controls previousLabel="{{'Pagination.Previous'|translate}}"
+        nextLabel="{{'Pagination.Next'|translate}}" (pageChange)="onDataChange($event)">
+      </pagination-controls>
+    </div>
+  </div>
+</div>

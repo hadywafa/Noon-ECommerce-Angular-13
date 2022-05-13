@@ -1,0 +1,90 @@
+<div class="container-wrapper">
+  <h3 class="login-text"><i class="bi bi-person-circle ac-logo"></i>Create an account</h3>
+  <span class="ac">Aleardy have an Account? <span class="btn btn-link" (click)="goSignin()">Sign In</span></span>
+  <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <!-- email -->
+    <div class="item">
+      <input
+        class="input"
+        type="text"
+        placeholder="Email"
+        formControlName="email"
+        [class.is-valid]="email?.valid"
+        [class.is-invalid]="email?.invalid"
+      />
+      <div [hidden]="email?.valid || email?.untouched" class="alert-hw alert-danger-hw">
+        <small *ngIf="email?.errors?.['required']">
+          Email is required
+        </small>
+        <small *ngIf="email?.errors?.['email']">
+          Not Vaild Email
+        </small>
+      </div>
+    </div>
+    <!-- password -->
+    <div class="item">
+      <input
+        class="input"
+        type="password"
+        placeholder="Password"
+        formControlName="password"
+        [class.is-valid]="password?.valid"
+        [class.is-invalid]="password?.invalid"
+      />
+      <div [hidden]="password?.valid || password?.untouched" class="alert-hw alert-danger-hw">
+        <small *ngIf="password?.errors?.['required']">
+          password is required
+        </small>
+        <small *ngIf="password?.errors?.['minlength']">
+          password must be at least 6 characters
+        </small>
+      </div>
+    </div>
+    <!-- first name -->
+    <div class="item">
+      <input
+        class="input"
+        type="text"
+        placeholder="First Name"
+        formControlName="firstName"
+        [class.is-valid]="firstName?.valid"
+        [class.is-invalid]="firstName?.invalid"
+      />
+      <div [hidden]="firstName?.valid || firstName?.untouched" class="alert-hw alert-danger-hw">
+        <small *ngIf="firstName?.errors?.['required']">
+          Full name is required
+        </small>
+        <small *ngIf="firstName?.errors?.['minlength']">
+          Full name must be 3 letters at least
+        </small>
+      </div>
+    </div>
+    <!-- last name -->
+    <div class="item">
+      <input
+        class="input"
+        type="text"
+        placeholder="Last Name"
+        formControlName="lastName"
+        [class.is-valid]="lastName?.valid"
+        [class.is-invalid]="lastName?.invalid"
+      />
+      <div [hidden]="lastName?.valid || lastName?.untouched" class="alert-hw alert-danger-hw">
+        <small *ngIf="lastName?.errors?.['required']">
+          Full name is required
+        </small>
+        <small *ngIf="lastName?.errors?.['minlength']">
+          Full name must be 3 letters at least
+        </small>
+      </div>
+    </div>
+    <!-- sumbit -->
+    <div class="item submit fs-4"><button type="submit" [disabled]="userForm.invalid">CREATE AN ACCOUNT</button></div>
+  </form>
+</div>
+<!-- For testing values  -->
+<!-- <div class="bg-warning text-center">
+  <h3>For Testing :</h3>
+  <p>{{userForm.value | json}}</p>
+  <h3>{{userForm.get('fullName')?.errors | json}}</h3>
+</div> -->

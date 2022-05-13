@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+
+.container-wrapper {
+  padding: 3em;
+  padding-bottom: 0%;
+  // margin: 2em;
+  width: max-content;
+}
+
+.login-text {
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+  margin-top: -2%;
+}
+
+.item,
+.container-wrapper label,
+button {
+  padding: 0.2em;
+}
+
+.submit {
+  text-align: center;
+  margin-top: 40px;
+  border-bottom: 1px solid #bebdbd;
+
+  button {
+    padding: 0.5em 1em 0.5em 1em;
+    border: none;
+    width: 100%;
+    font-weight: bold;
+    color: rgb(47, 94, 176);
+    background-color: #ffffff;
+    font-size: 18px;
+  }
+}
+
+//#region Hw
+
+small {
+  color: #ff0000;
+  font-size: x-small;
+  padding: 0.2em;
+}
+
+.alert-hw {
+  border-top: 1px solid #ff0000;
+}
+
+//#endregion
+
+form {
+  margin: 2em auto 2em auto;
+}
+
+.input {
+  padding: 10px;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #c0bebe;
+  font-size: 15px;
+  margin: 2px;
+  margin-bottom: 0px;
+  &:focus {
+    outline: none;
+  }
+}
+* {
+  font-family: "Varela Round", sans-serif;
+  color: #3a2d2d;
+}
+
+// #region i dont know why but it works
+.remember {
+  font-size: normal;
+  margin-left: 40%;
+  display: inline-block;
+  margin-top: 17px;
+}
+
+.ac {
+  display: inline-block;
+  font-size: medium;
+  margin-top: 24px;
+  text-align: center;
+}
+
+.ac a {
+  text-decoration: underline;
+  color: #3a2d2d;
+}
+
+.ac-logo {
+  padding: 5px;
+  size: 20px;
+}
+
+#toc {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.container h2 {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid #000;
+  line-height: 0.1em;
+  margin: 10px 0 20px;
+
+  span {
+    background-color: #ffffff;
+    padding: 0 10px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .container-wrapper {
+    padding: 2em;
+    margin: 1em;
+  }
+
+  .login-text {
+    font-size: 1.5em;
+  }
+
+  .item {
+    padding: 0.1em;
+    text-align: center;
+  }
+
+  .container-wrapper label,
+  button {
+    padding: 0.1em;
+  }
+
+  .submit {
+    margin-top: 1em;
+    margin-bottom: 2em;
+
+    button {
+      padding: 0.5em 1em;
+      border-radius: 4.7em;
+      font-size: 14px;
+    }
+  }
+
+  form {
+    margin: 1em auto 1em auto;
+  }
+
+  .input {
+    padding: 10px;
+    border-radius: 15px;
+    font-size: 15px;
+  }
+
+  .remember {
+    font-size: smaller;
+    margin-left: 6em;
+  }
+
+  .ac,
+  #toc {
+    font-size: small;
+  }
+
+  .social-mediaImg {
+    width: 40px;
+  }
+
+  .container h2 span {
+    font-size: medium;
+  }
+}
+//#endregion

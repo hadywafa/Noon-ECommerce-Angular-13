@@ -1,0 +1,168 @@
+@media only screen and (max-width: 1000px) {
+  #aboveFooter {
+    flex-direction: column;
+    text-align: center;
+    max-width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+
+@media only screen and (max-width: 700px) {
+  #contactInfo {
+    flex-direction: column;
+    text-align: center;
+    max-width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #weAreHere,
+  #reachOut {
+    margin-left: 55px;
+  }
+}
+
+
+@media only screen and (max-width: 1500px) and (min-width: 700px) {
+  #footerLinksFinal {
+    width: 100%;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  list-style: none;
+}
+
+#yourFavoriteBrands {
+  background-color: #fff;
+  max-width: 76%;
+}
+
+#yourFavoriteBrandsImg {
+  margin-bottom: 2%;
+}
+
+#seperate1 {
+  color: #6c757d;
+  height: 1px;
+  margin-top: -0.08%;
+}
+
+#weAreHere {
+  font-weight: bold;
+  font-size: larger;
+  color: #404553;
+}
+
+#contactLabel {
+  font-weight: 600;
+  font-size: small;
+  margin-bottom: -0.6%;
+  color: #7e859b;
+}
+
+.contactWay {
+  font-weight: bold;
+  font-size: large;
+  margin-top: -0.6%;
+  color: #404558;
+}
+
+.contactIcon {
+  font-size: x-large;
+  margin-right: 0.55rem;
+  margin-left: 2.2rem;
+}
+
+#seperate2 {
+  color: #6c757d;
+  height: 1px;
+  margin-top: 0%;
+}
+
+.mainfooter{
+  background-color: #f7f7fa;
+  overflow-x: hidden;
+}
+
+.footerFluid {
+  background-color: #fff;
+  padding-bottom: 2%;
+}
+
+.footer {
+  background-color: #fff;
+  padding-top: 1%;
+  margin-top: -0.8%;
+}
+
+.footerCatHeader {
+  font-weight: bold;
+  color: #40455e;
+  margin-bottom: 4%;
+}
+
+.footerCatHeader:hover {
+  color: #7f7f7f;
+}
+
+.footerCatItems {
+  color: #40455e;
+  font-size: small;
+  font-weight: 400;
+}
+
+.footerCatItems:hover {
+  color: #7f7f7f;
+}
+
+.footerCatItems2 {
+  color: #40455e;
+  font-size: small;
+  font-weight: 400;
+}
+
+#shopOnTheGo {
+  font-weight: bold;
+  margin-bottom: 1%;
+}
+
+.img-store {
+  width: 110px;
+  max-width: 150px;
+  margin-right: 0.25rem;
+  margin-left: 0.25rem;
+}
+
+#connectWithUs {
+  font-weight: bold;
+  margin-left: 55%;
+  width: 120%;
+  max-width: 120%;
+}
+
+.social {
+  font-size: xx-large;
+  margin-right: 3%;
+  margin-left: 3%;
+}
+
+
+#rights {
+  font-weight: normal;
+  font-size: small;
+  color: #7e859b;
+}
+
+.pay {
+  font-size: larger;
+  margin-right: 1%;
+  margin-left: 1%;
+}

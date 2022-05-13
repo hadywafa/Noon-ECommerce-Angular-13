@@ -1,0 +1,80 @@
+<div id="pop">
+  <div id="updateAddress" class="d-none updateAddress">
+    <div class="header">
+      <h1 class="">
+        {{'userprofile.changepassword'|translate}}
+        <button class="float-end btn btn-defualt close" (click)="divhide()">X</button>
+      </h1>
+    </div>
+
+    <div class="row mt-5">
+      <div class="col-lg-12 mt-5">
+        <label>{{'userprofile.cpassword'|translate}}</label>
+        <input type="password" class="form-control" name="currentPassword" #cpass />
+      </div>
+      <div class="col-lg-12 mt-5">
+        <label>{{'userprofile.npassword'|translate}}</label>
+        <input type="password" class="form-control" name="newPassword" #npass />
+      </div>
+
+      <div class="col-lg-12 mt-5 text-center">
+        <button class="btn btn-primary w-50" (click)="updatePassword(cpass.value,npass.value)">
+          {{'userprofile.update'|translate}}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-pop">
+  <div class="row">
+    <div class="col-lg-12 col-md-12 headprofile mt-4">
+      <h2>{{'userprofile.generalInfo' |translate}}</h2>
+    </div>
+    <div class="cart p-4">
+      <div class="row">
+        <div class="col-lg-4">
+          <label>{{'userprofile.firstName' |translate}}</label>
+          <input type="text" name="FirstName" class="form-control" #first [value]="user.firstName" />
+        </div>
+        <div class="col-lg-4">
+          <label>{{'userprofile.lastName' |translate}}</label>
+          <input type="text" name="LastName" class="form-control" #last value="{{user.lastName}}" />
+        </div>
+        <div class="col-lg-4">
+          <label>{{'userprofile.preferdLang' |translate}}</label>
+          <select class="form-control">
+            <option>{{'userprofile.ar'|translate}}</option>
+            <option>{{'userprofile.en'|translate}}</option>
+          </select>
+
+          <button
+            class="btn btn-outline-secondary w-75 mt-4 mb-4 float-end"
+            (click)="UpdateGenral(first.value,last.value)"
+          >
+            {{'userprofile.save' |translate}}
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-12 col-md-12 headprofile mt-4">
+      <h2>{{'userprofile.security' |translate}}</h2>
+    </div>
+    <div class="cart p-4">
+      <div class="row">
+        <div class="col-lg-6">
+          <label>{{'userprofile.email' |translate}}</label>
+          <input type="email" name="email" class="form-control" value="{{user.email}}" readonly />
+        </div>
+        <div class="col-lg-6">
+          <label>{{'userprofile.password' |translate}}</label>
+          <input type="password" name="password" class="form-control" #password value="********" />
+          <button class="btn btn-outline-secondary w-50 mt-4 mb-4 float-end" (click)="showdiv()">
+            {{'userprofile.changepassword' |translate}}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

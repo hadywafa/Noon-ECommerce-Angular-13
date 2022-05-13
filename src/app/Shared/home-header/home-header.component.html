@@ -1,0 +1,137 @@
+<div class="container-fluid">
+  <!-- Main Header (Yello Part) -->
+
+  <div id="firstNav" class="row main-color py-1">
+    <div class="col-10 col-lg-6 col-xl-7 col-xxl-8" id="LogoSearch">
+      <div class="row">
+        <div class="col-4 col-md-2 col-lg-3 col-xl-2 col-xxl-2 mt-1">
+          <a href="">
+            <img
+              src="https://z.nooncdn.com/s/app/com/noon/images/logos/noon-black-en.svg"
+              alt="Noon Logo"
+              *ngIf="localstorge=='en'"
+            />
+
+            <img
+              src="https://z.nooncdn.com/s/app/com/noon/images/logos/noon-black-ar.svg"
+              alt="Noon Logo"
+              *ngIf="localstorge=='ar'"
+            />
+          </a>
+        </div>
+
+        <div class="col-8 col-md-9 col-lg-9 col-xl-10 col-xxl-10 text-center">
+          <input
+            type="text"
+            placeholder="{{'Header.Search'|translate }}"
+            class="col-12 rounded border-0 p-2 mt-2"
+            #search
+            (input)=" onSearchTextChange(search.value)"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="col-7 col-lg-6 col-xl-5 col-xxl-4 mt-2 px-5" id="headerList">
+      <ul class="list-inline">
+        <li class="list-inline-item" *ngIf="localstorge!=='ar'">
+          <button class="btn btn-defualt headerLink" (click)="loclaztion('ar')">
+            العربية
+          </button>
+        </li>
+
+        <li class="list-inline-item" *ngIf="localstorge!=='en'">
+          <button class="btn btn-defualt" (click)="loclaztion('en')">
+            English
+          </button>
+        </li>
+
+        <li class="list-inline-item" *ngIf="token">
+          <button class="headerLink" mat-button [matMenuTriggerFor]="menu">
+            <div class="d-inline-block mx-2">
+              <small class="bg-transparent">ahlan ! {{userName}}</small>
+              <div class="bg-transparent fw-bold">My Account</div>
+            </div>
+            <span class="mb-2"><i class="fa-solid fa-sort-down"></i></span>
+          </button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item routerLink="/user/order">
+              <img src="	https://z.nooncdn.com/s/app/com/noon/icons/orders_menu_icon_v3.svg" /> Orders
+            </button>
+            <button mat-menu-item routerLink="/user/Address">
+              <img src="https://z.nooncdn.com/s/app/com/noon/icons/addresses_menu_icon_v3.svg" /> Addresses
+            </button>
+            <button mat-menu-item routerLink="/user/payment">
+              <img src="https://z.nooncdn.com/s/app/com/noon/icons/payment_menu_icon_v3.svg" /> Payments
+            </button>
+            <button mat-menu-item routerLink="/user/return">
+              <img src="	https://z.nooncdn.com/s/app/com/noon/icons/returns_menu_icon_v3.svg" /> Returns
+            </button>
+            <button mat-menu-item routerLink="/user/profile">
+              <img src="	https://z.nooncdn.com/s/app/com/noon/icons/profile_menu_icon_v3.svg" /> Profile
+            </button>
+            <button mat-menu-item (click)="logout()">Logout</button>
+          </mat-menu>
+        </li>
+
+        <li class="list-inline-item" *ngIf="!token">
+          <span class="btn" (click)="register()"> {{'Header.Sign'|translate}} <i class="fa-solid fa-user"></i> </span>
+        </li>
+
+        <li class="list-inline-item">
+          <button type="button" class="btn btn-defualt position-relative">
+            <a class="headerLink" [routerLink]="['/egypt-en/cart']">
+            
+              {{'Header.Cart'|translate}} <i class="fa-solid fa-cart-shopping">
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" *ngIf="countCart>0 && localstorge == 'en'">
+                  {{countCart}}
+                  <span class="visually-hidden">unread messages</span>
+                </span>
+                <span class="position-absolute top-0 end-70 translate-middle badge rounded-pill bg-danger" *ngIf="countCart>0 && localstorge == 'ar'">
+                  {{countCart}}
+                  <span class="visually-hidden">unread messages</span>
+                </span>
+              </i>
+            </a>
+          
+          </button>
+
+         
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Second Header (Categories) -->
+
+  <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand btn" [routerLink]="['/egypt-en']">{{'Header.AllProducts'|translate}}</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mb-2 mb-lg-0">
+          <li class="nav-item dropdown" *ngFor="let cat of Categories">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              {{localstorge=="en"? cat.name:cat.nameAr}}
+            </a>
+
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li *ngFor="let scat of SubCategories">
+                <ng-container *ngIf="scat.mainCatId==cat.id">
+                  <a class="dropdown-item" [routerLink]="['/Category',scat.id]">{{localstorge=="en"?
+                    scat.name:scat.nameAr}}</a>
+                </ng-container>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav> -->
+</div>

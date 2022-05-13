@@ -1,0 +1,48 @@
+
+
+
+
+.main-color {
+    background-color: #feef00;
+  }
+  input:focus {
+    outline: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+
+
+  #firstNav li::before {
+    content: "|";
+    margin-right: 15px;
+  }
+
+  #firstNav li:first-child::before {
+    content: "";
+  }
+
+
+  .dropdown-toggle::after {
+    content: none;
+  }
+
+  @media screen and (max-width:990px) and (min-width:450px) {
+
+    #headerList{
+      width: 600px;
+    }
+    }
+
+
+
+
+
+
+
+
+
+

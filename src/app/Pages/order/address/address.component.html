@@ -1,0 +1,156 @@
+<div class="row">
+  <ng-container *ngFor="let item of addresses ;let i=index">
+    <div class=" col-3 divAddress me-2" *ngIf="item.isPrimary" (click)="getAddress(item.id)">
+
+      <div class="row headaddress">
+        <div class="">
+          <h4>Primary Address</h4>
+        </div>
+      </div>
+
+      <div class="cart p-1">
+        <div class="row">
+
+          <div class="col-12">
+            <div class="row">
+              <div class="col-12">
+                <h4>Home <i class="fa fa-address-book" aria-hidden="true"></i></h4>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-4">
+                <h4>City</h4>
+              </div>
+              <div class="col-8">
+
+                <p>{{item.city}}</p>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-4">
+                <h4>Street</h4>
+              </div>
+              <div class="col-8">
+
+
+                <p>{{item.street}}</p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+
+    </div>
+  </ng-container>
+
+  <ng-container *ngFor="let item of addresses ;let i=index">
+    <div class=" col-3 divAddress me-2" *ngIf="!item.isPrimary" (click)="getAddress(item.id)">
+
+      <div class="row headaddress">
+        <div class="">
+          <h4>Secondry Address</h4>
+        </div>
+      </div>
+
+      <div class="cart p-1">
+        <div class="row">
+
+          <div class="col-12">
+            <div class="row">
+              <div class="col-12">
+                <h4>Home <i class="fa fa-address-book" aria-hidden="true"></i></h4>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-4">
+                <h4>City</h4>
+              </div>
+              <div class="col-8">
+
+                <p>{{item.city}}</p>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-4">
+                <h4>Street</h4>
+              </div>
+              <div class="col-8">
+
+
+                <p>{{item.street}}</p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+
+    </div>
+  </ng-container>
+
+  <!--=========================-->
+
+  <!--=========================-->
+
+  <!-- <div *ngFor="let item of user.Address ;let i=index">
+
+    <ng-component>
+      <div class="cart col-3 divAddress me-2 p-2">
+
+        <div class="row">
+
+          <div class="col-12">
+            <div class="row">
+              <div class="col-4">
+                <h4>Home <i class="fa fa-address-book" aria-hidden="true"></i></h4>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-4">
+                <h4>Name</h4>
+              </div>
+              <div class="col-8">
+
+                <p>{{user.FirstName + " " + user.LastName}}</p>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-4">
+                <h4>Address</h4>
+              </div>
+              <div class="col-8">
+
+                <p>{{item.address}}</p>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-4">
+                <h4>PhoneNumber</h4>
+              </div>
+              <div class="col-8">
+
+                <p>{{user.phone}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-component>
+  </div> -->
+
+
+
+
+</div>

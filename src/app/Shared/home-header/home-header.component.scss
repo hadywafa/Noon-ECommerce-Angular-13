@@ -1,0 +1,87 @@
+// FirstNav
+
+// @media  only screen and (max-width:600px) and (min-width:500px) {
+
+// #headerList{
+//   margin-left: 90px;
+//   overflow: hidden;
+
+// }
+
+// }
+
+//==========================================================================================
+
+.main-color {
+  background-color: #feef00;
+}
+input:focus {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+#firstNav li::before {
+  content: " |";
+}
+
+#firstNav li:first-child::before {
+  content: "";
+}
+
+
+
+
+@media screen and (max-width:990px) and (min-width:450px) {
+
+#headerList{
+  width: 600px;
+}
+}
+
+
+.headerLink:hover{
+  color: #8c8932;
+}
+
+
+
+
+
+
+
+//End First Nav
+//-------------------------------------------------------
+
+.dropdown-toggle::after {
+  content: none;
+}
+//==========================================================================================
+// .secondNav {
+//   border-bottom: 0.5px solid #ced4da;
+//   width: 100%;
+//   background-color: #fcfbf4;
+//   overflow: hidden;
+// }
+
+// .secondNavItem {
+//   font-weight: 650;
+//   margin-right: 30px;
+//   margin-top: 7px;
+//   margin-bottom: -6px;
+//   font-size: 0.9rem;
+// }
+
+// .allCategories {
+//   font-weight: 650;
+//   margin-left: 15px;
+//   margin-right: 25px;
+//   color: #3866df;
+// }
+// .customize + * .mat-menu-panel {
+//   background: red;
+// }
+

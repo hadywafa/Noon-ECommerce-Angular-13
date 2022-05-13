@@ -1,0 +1,90 @@
+<app-home-header></app-home-header>
+
+<div class="container-fluid overflow-hidden">
+  <div class="cartdiv">
+    <div class="row">
+      <div class="col-lg-7 col-md-7 mt-4" style="margin-left: 50px;">
+        <!-- Cart -->
+        <div id="cart">
+          <div class="cart">
+            <div class="header p-1" id="headercart">
+              <h4>Cart</h4>
+            </div>
+
+            <ng-container *ngIf="LocalStorageProducts != null">
+              <div *ngFor="let product of LocalStorageProducts">
+                <div class="row p-3">
+                  <div class="col-lg-2">
+                    <img [src]="product.product.imageThumb" class="img-fluid" />
+                  </div>
+
+                  <div class="col-7">
+                    <p>{{lang=="en"?product.product.name:product.product.nameArabic}}</p>
+                    <p>{{lang=="en"?product.product.description:product.product.descriptionAr}}</p>
+                    <p>{{'orderSummery.quantity'|translate}}: {{product.quantity}}</p>
+                    <p>{{'orderSummery.price'|translate}}: {{product.product.price-(product.product.price*product.product.discount)}}</p>
+
+                  </div>
+                  <div class="col-lg-3 text-center">
+
+
+                    <button class="btn btn-danger mt-4 " (click)="Remove(product.product.id)">{{'Cart.Remove'|translate}}</button>
+
+
+                  </div>
+                </div>
+              </div>
+            </ng-container>
+          </div>
+        </div>
+        <!-- Router -->
+        <a routerLink="/">
+          <button class="btn btn-outline-primary mt-4 mb-4">
+            {{'Cart.ContinueShopping'|translate}}
+          </button>
+        </a>
+        <!-- Wishlist -->
+        <app-wish-list *ngIf="isLogged"></app-wish-list>
+      </div>
+      <div class="col-lg-4 col-md-4 mt-4">
+        <div class="rightside p-4">
+          <h5>{{'orderSummery.OrderSummary'|translate}}</h5>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="{{'orderSummery.copon'|translate}}"
+              aria-label="Recipient's username" aria-describedby="basic-addon2" />
+            <div class="input-group-append">
+              <button class="btn btn-primary" type="button">{{'orderSummery.applay'|translate}}</button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-8">
+              <p class="mt-4">{{'orderSummery.subtotatl'|translate}}({{LocalStorageProducts.length}})</p>
+              <p class="mt-4">{{'orderSummery.shipping'|translate}}</p>
+            </div>
+            <div class="col-4">
+              <p class="mt-4">Egy {{totalPrice}}</p>
+              <p class="mt-4">{{'orderSummery.free'|translate}}</p>
+            </div>
+          </div>
+          <hr />
+
+          <div class="row">
+            <div class="col-8">
+              <p class="mt-4">{{'orderSummery.Total'|translate}}</p>
+            </div>
+            <div class="col-4">
+              <p class="mt-4">Egy {{totalPrice}}</p>
+            </div>
+            <div class="col-12 text-center">
+              <img src="https://z.nooncdn.com/s/app/com/noon/icons/emi.svg" />
+              <p class="d-inline">{{'orderSummery.descripe'|translate}}</p>
+              <button class="w-75 btn btn-primary" [disabled]="LocalStorageProducts.length==0" (click)="CheckOut()">
+                {{'orderSummery.chackOut'|translate}}
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

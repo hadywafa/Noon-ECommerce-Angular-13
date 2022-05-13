@@ -1,0 +1,40 @@
+<div class="container-fluid">
+
+<div class=" my-3 d-flex justify-content-center">Order Details</div>
+
+<div>
+
+<p>Order Id: {{OD.id}} </p>
+<p>Total Price: {{OD.totalPrice|currency:"EGP"}} </p>
+<p>Deliver Status: <ng-container [ngSwitch]="OD.deliveryStatus">
+
+  <span *ngSwitchCase="0">Processing</span>
+  <span *ngSwitchCase="1">Shipped</span>
+  <span *ngSwitchCase="2">Delivered</span>
+  <span *ngSwitchCase="3">Cancelled</span>
+  <span *ngSwitchCase="4">Returned</span>
+
+</ng-container> </p>
+<p>Order Id: {{OD.deliveryStatusDescription}} </p>
+
+<div  *ngFor="let product of OD.products">
+{{product.name}}
+<img src="{{product.imageThumb}}" alt="">
+</div>
+
+
+</div>
+
+
+
+
+<div class="buttons d-flex justify-content-center">
+  <button class="btn bg-warning" (click)="back()" >Back</button>
+</div>
+</div>
+
+
+
+
+
+

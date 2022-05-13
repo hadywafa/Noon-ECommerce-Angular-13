@@ -1,0 +1,27 @@
+<!-- Specifications -->
+<div id="specifications" class="container-fluid">
+  <div class="row">
+    <!-- table-1 -->
+    <div class="col-6">
+      <table class="table table-striped borderless">
+        <tbody>
+          <tr *ngFor="let spec1 of specTable1">
+            <td>{{spec1?.key}}</td>
+            <td>{{spec1?.value}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- table-2 -->
+    <div class="col-6">
+      <table class="col-6 table table-striped borderless">
+        <tbody>
+          <tr *ngFor="let spec2 of specTable2">
+            <td>{{spec2?.key}}</td>
+            <td>{{spec2?.value}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

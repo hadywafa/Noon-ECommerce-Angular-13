@@ -1,0 +1,189 @@
+<!--showdiv add address-->
+<div id="pop">
+  <div id="addAddress" class="d-none addAddress">
+    <div class="header">
+      <h1 class="">
+        {{'userAddress.newAddress'|translate}}
+        <button class="float-end btn btn-defualt close" (click)="divhideAdd()">X</button>
+      </h1>
+    </div>
+
+    <div class="row mt-5">
+      <div class="col-lg-12 mt-2">
+        <label>{{'userAddress.city'|translate}}</label>
+        <input type="text" class="form-control" name="city" #city />
+      </div>
+      <div class="col-lg-12 mt-4">
+        <label>{{'userAddress.street'|translate}}</label>
+        <input type="text" class="form-control" name="street" #street />
+      </div>
+      <div class="col-lg-12 mt-4">
+        <label>{{'userAddress.postalCode'|translate}}</label>
+        <input type="text" class="form-control" name="postal" #postal />
+      </div>
+      <div class="col-lg-12 mt-4">
+        <label>{{'userAddress.PhoneNumber'|translate}}</label>
+        <input type="text" class="form-control" name="phone" #phone />
+      </div>
+      <div class="col-lg-12 mt-4 text-center">
+        <button class="btn btn-primary w-50" (click)="addAddress(city.value,street.value,postal.value,phone.value)">
+          {{'userAddress.new'|translate}}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--showdiv Update address-->
+<div id="pop">
+  <div id="updateAddress" class="d-none updateAddress">
+    <div class="header">
+      <h1 class="">
+        {{'userAddress.updateAddress'|translate}}
+        <button class="float-end btn btn-defualt close" (click)="divhideupdate()">X</button>
+      </h1>
+    </div>
+
+    <div class="row mt-5">
+      <div class="col-lg-12 mt-5">
+        <input type="hidden" class="form-control" name="id" #id [value]="address.id" />
+        <label>{{'userAddress.city'|translate}}</label>
+        <input type="text" class="form-control" name="city" #ctiy [value]="address.city" />
+      </div>
+      <div class="col-lg-12 mt-5">
+        <label>{{'userAddress.street'|translate}}</label>
+        <input type="text" class="form-control" name="street" #street [value]="address.street" />
+      </div>
+      <div class="col-lg-12 mt-5">
+        <label>{{'userAddress.postalCode'|translate}}</label>
+        <input type="text" class="form-control" name="postal" #postal [value]="address.postalCode" />
+      </div>
+
+      <div class="col-lg-12 mt-2 text-center">
+        <button class="btn btn-primary w-50" (click)="updateAddrsess(id.value,ctiy.value,street.value,postal.value)">
+          {{'userAddress.update'|translate}}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-pop">
+  <div class="col-lg-3 float-end">
+    <button class="btn btn-primary" (click)="showdivAdd()">{{'userAddress.newAddress'|translate}}</button>
+  </div>
+
+  <div class="col-lg-9">
+    <h1>{{'userAddress.Addresses'|translate}}</h1>
+    <p>{{'userAddress.descrip'|translate}}</p>
+  </div>
+  <ng-container  *ngFor="let item of Addresses ;let i=index">
+    <div  *ngIf="item.isPrimary">
+
+        <div class="row">
+
+
+
+        </div>
+        <div class="row headaddress mt-4">
+          <div class="col-9">
+            <h2>{{'userAddress.PrimaryAddress'|translate}}</h2>
+          </div>
+
+          <div class="form-check form-switch col-3">
+            <label class="form-check-label" for="flexSwitchCheckChecked">{{'userAddress.default'|translate}}</label>
+            <input
+              class="form-check-input"
+              type="checkbox"
+              role="switch"
+              id="flexSwitchCheckChecked"
+              [checked]="item.isPrimary"
+              (change)="change(item.isPrimary,item.id)"
+            />
+          </div>
+        </div>
+
+        <div class="cart p-2 pb-4">
+          <div class="row">
+            <div class="col-8">
+              <h2>{{'userAddress.Home'|translate}}</h2>
+            </div>
+
+            <div class="col-4">
+              <span (click)="deleteAddrsess(item.id)" class="text-danger me-4 spanaddress">Delete</span>
+              <span (click)="showdivupdate(item.id)" class="text-success me-4 spanaddress">update</span>
+            </div>
+            <div class="col-lg-3">
+              <h2>{{'userAddress.Name'|translate}}</h2>
+              <p>{{user.firstName + " " + user.lastName}}</p>
+            </div>
+            <div class="col-lg-6">
+              <h2>{{'userAddress.Address'|translate}}</h2>
+              <p>{{'userAddress.descrip'|translate}}</p>
+              <p>{{item.city + " "+item.street}}</p>
+              <p>{{item.postalCode}}</p>
+            </div>
+            <div class="col-lg-3">
+              <h2>{{'userAddress.PhoneNumber'|translate}}</h2>
+              <p>{{user.phone}}</p>
+            </div>
+          </div>
+        </div>
+
+    </div>
+  </ng-container>
+
+  <!--=========================-->
+
+  <!--=========================-->
+  <ng-container *ngFor="let item of Addresses ;let i=index">
+    <div *ngIf="!item.isPrimary">
+      <div class="row headaddress mt-4">
+        <div class="col-9">
+          <h2 class="d-inline">{{'userAddress.OtherAddress'|translate}}</h2>
+        </div>
+        <div class="form-check form-switch col-3">
+          <label class="form-check-label" for="flexSwitchCheckChecked">{{'userAddress.default'|translate}}</label>
+          <input
+            class="form-check-input"
+            type="checkbox"
+            role="switch"
+            id="flexSwitchCheckChecked"
+            [checked]="item?.isPrimary"
+            (change)="change(item.isPrimary , item.id)"
+            [disabled]="item?.isPrimary"
+          />
+        </div>
+      </div>
+
+      <div class="cart p-4">
+        <div class="row">
+          <div class="col-8">
+            <h2>{{'userAddress.Home'|translate}}</h2>
+          </div>
+
+
+          <div class="col-4">
+            <span (click)="deleteAddrsess(item.id)" class="text-danger me-4 spanaddress">Delete</span>
+            <span (click)="showdivupdate(item.id)" class="text-success me-4 spanaddress">update</span>
+          </div>
+          <div class="col-lg-3">
+            <h2>{{'userAddress.Name'|translate}}</h2>
+            <p>{{user.firstName + " " + user.lastName}}</p>
+          </div>
+          <div class="col-lg-6">
+            <h2>{{'userAddress.Address'|translate}}</h2>
+            <p>{{'userAddress.descrip'|translate}}</p>
+            <p>{{item?.city + " "+item?.street}}</p>
+            <p>{{item.postalCode}}</p>
+          </div>
+          <div class="col-lg-3">
+            <h2>{{'userAddress.PhoneNumber'|translate}}</h2>
+            <p>{{user?.phone}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</div>

@@ -1,0 +1,89 @@
+{
+  "userprofileLinks": {
+    "order": "Orders",
+    "Address": "Addresses",
+    "return": "Returns",
+    "profile": "Profile",
+    "payment": "Payments"
+
+  },
+  "userprofile": {
+    "generalInfo": "General Information",
+    "security": "Scurity",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "preferdLang": "Preferred language",
+    "email": "Email",
+    "password": "Password",
+    "save": "Save",
+    "changepassword": "Change Password",
+    "cpassword": "Current Password",
+    "npassword": "New Password",
+    "update": "Update",
+    "ar": "Arabic",
+    "en": "English"
+  },
+  "userAddress": {
+    "Addresses": "Addresses",
+    "PrimaryAddress": "Primary Address",
+    "OtherAddress": "Other Addresses",
+    "Home": "Home",
+    "Name": "Name",
+    "Address": "Address",
+    "descrip": "see how your Address managed and check the lastest status on your Address",
+    "PhoneNumber": "Phone Number",
+    "newAddress": "Add New Address",
+    "new": "Add",
+    "updateAddress": "Update Address",
+    "update": "Update",
+    "default": "Defualt Address",
+    "street": "Street",
+    "city": "City",
+    "postalCode": "Postal Code"
+  },
+  "userReturn": {
+    "Return": "Return",
+    "ReturnId": "Return ID",
+    "Address": "Address",
+    "Approved": "Approved",
+    "Express": "Express",
+    "RefundMethod": "Refund Method",
+    "tax": "Tax Credit Note"
+  },
+  "userorder": {
+    "order": "Order",
+    "Dileveried": "Dileveried",
+    "Review": "Review This Order",
+    "descrip": "see how your order managed and check the lastest status on your order"
+  },
+
+  "Header": {
+    "Sign": "Sign In",
+    "Cart": "Cart",
+    "Search": "What are you looking for?",
+    "AllProducts": "All Products"
+  },
+  "Pagination": {
+    "Next": "Next",
+    "Previous": "Previous"
+  },
+  "Cart": {
+    "ContinueShopping": "Continue Shopping",
+    "Remove": "Remove"
+  },
+
+  "orderSummery": {
+    "OrderSummary": "Order Summary",
+    "free": "Free",
+    "subtotatl": "subtotal",
+    "Total": "Total (inclusive of Vat)",
+    "descripe": "Monthly payment plans from EGP 500",
+    "detailes": "Shipping Detials",
+    "chackOut": "Check Out",
+    "applay":"Applay",
+    "copon":"code copon or Gift card",
+    "shipping":"Shipping Detials",
+    "quantity":"Quantity",
+    "price":"Price"
+  }
+}

@@ -1,0 +1,6 @@
+<ng-container *ngIf="isSignUp">
+  <app-sign-in (emmiterSignUp)="openSignIn()"></app-sign-in>
+</ng-container>
+<ng-container *ngIf="isSignIn">
+  <app-sign-up (emmiterSignIn)="openSignUp()"></app-sign-up>
+</ng-container>

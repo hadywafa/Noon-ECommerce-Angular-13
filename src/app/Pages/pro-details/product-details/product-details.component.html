@@ -1,0 +1,272 @@
+<!-- Header -->
+<app-home-header></app-home-header>
+<!-- Body -->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12 row">
+      <div class="container mx-2 px-0 justify-content-center">
+        <div class="row" id="contain">
+          <!-- Category Path -->
+          <div class="col-12 ps-4">
+            <ol class="list-unstyled">
+              <ng-container *ngIf="productCategories.length >1">
+                <ng-container *ngFor="let cat of productCategories ; let i = index ">
+                  <li class="list-unstyled d-inline-block">
+                    <span class="btn text-muted px-1" (click)="goCatProducts(cat.code)">{{cat?.name}}</span>
+                    <ng-container *ngIf="i+1< productCategories.length">
+                      <img class="arrowCat" src="https://z.nooncdn.com/s/app/com/noon/icons/right-chevron.svg" />
+                    </ng-container>
+                  </li>
+                </ng-container>
+              </ng-container>
+              <!-- <li class="list-unstyled d-inline-block">
+                <span class="btn text-muted px-1" (click)="goCatProducts(lastCat.id)">{{lastCat?.name}}</span>
+              </li> -->
+            </ol>
+          </div>
+          <!-- Images+Product Data -->
+          <div class="col-lg-8">
+            <div class="container-fluid">
+              <div class="row">
+                <!-- Images -->
+                <div class="col-lg-6 col-md-6 col-sm-12 mb-4">
+                  <div class="ps-0 container-fluid">
+                    <div class="row">
+                      <!-- sub imgs -->
+                      <!-- TODO: vl Silder + zoomable image -->
+                      <div class="ms-0 imgs-gallary col-4" id="imgs-gallary">
+                        <ng-container *ngIf="this.proImgs">
+                          <ng-container *ngFor="let img of proImgs">
+                            <img
+                              #selectedImg
+                              class="img-fluid btn mb-2"
+                              src="{{img}}"
+                              alt="img"
+                              id="sub-img"
+                              (click)="changeMainImage(selectedImg)"
+                            />
+                          </ng-container>
+                        </ng-container>
+                      </div>
+                      <!-- main img -->
+                      <div class="col-8">
+                        <img class="img-thumbnail mb-2 img-thumb" src="{{mainProImg}}" id="main-img" />
+                        <!-- <lib-ngx-image-zoom
+                          [thumbImage]="proImg"
+                          [magnification]="1"
+                          [enableScrollZoom]="true"
+                          [enableLens]="true"
+                          [lensWidth]="200"
+                          [lensHeight]="200"
+                          [circularLens]="true"
+                        ></lib-ngx-image-zoom> -->
+                      </div>
+                    </div>
+                  </div>
+
+                  <div id="" class="imgs-gallary"></div>
+                </div>
+                <!-- product Data -->
+                <div class="col-lg-6 col-md-6 col-sm-12 mb-4">
+                  <!-- Title -->
+                  <div class="text-muted">{{selectedProduct?.brandName}}</div>
+                  <!-- Product Name -->
+                  <div class="fs-4 fw-bold">{{selectedProduct?.name}}</div>
+                  <!-- Model Number -->
+                  <div class="text-muted mt-3">
+                    <ng-container *ngIf="selectedProduct?.modelNumber">
+                      <span>Model Number : {{selectedProduct?.modelNumber}}</span>
+                    </ng-container>
+                    <span class="badge bg-success mx-1"
+                      >{{totalProductReviewRating}} <i class="fa fa-star text-light"></i>
+                    </span>
+                    <a class="noonLink" href="#">{{totalProductReviewCount}} Rating</a>
+                  </div>
+                  <!-- Was Price -->
+                  <ng-container *ngIf="selectedProduct.discount<1 && selectedProduct.discount>0">
+                    <div class="mt-3">
+                      <span class="me-2">Was:</span>
+                      <span class="text-muted text-decoration-line-through"
+                        >EGP {{selectedProduct?.price | number : '1.0-2'}}</span
+                      >
+                    </div>
+                  </ng-container>
+                  <!-- Current Price -->
+                  <div class="mt-2">
+                    <span class="me-2">Now:</span>
+                    <span class="ms-2 fs-4 fw-bold"
+                      >EGP {{selectedProduct.price * (1-selectedProduct.discount) | number : '1.0-2'}}</span
+                    ><span class="ms-2 text-muted fs-6">Inclusive of VAT</span>
+                  </div>
+                  <!-- Dicound Percentage -->
+                  <ng-container *ngIf=" selectedProduct.discount<1 && selectedProduct.discount>0 ">
+                    <div class="mt-3">
+                      <span>Saving:</span>
+                      <span class="ms-2 fs-5 fw-bold"
+                        >EGP {{selectedProduct.price * (selectedProduct.discount) | number : '1.0-2'}}</span
+                      ><span class="mx-3 mb-3 bg-success bg-opacity-10 text-success fw-bold"
+                        >{{selectedProduct.discount*100 | number : '1.0-2'}}% off</span
+                      >
+                    </div>
+                  </ng-container>
+                  <!-- Note -->
+                  <div class="mt-3">
+                    <span id="monthlyPayment" style="background-color: #fcfbf5;" class="text-muted fs-6 me-2"
+                      ><img class="icon me-2" src="https://z.nooncdn.com/s/app/com/noon/icons/emi.svg" alt="" />Monthly
+                      payment plans from EGP 244 <a href="">view more details</a></span
+                    >
+                    <img
+                      *ngIf="selectedProduct.isFreeDelivered"
+                      class="img-fluid ms-5"
+                      src="https://z.nooncdn.com/s/app/com/noon/images/fulfilment_express_v2-en.svg"
+                      alt=""
+                    />
+                  </div>
+                  <!-- Gif -->
+                  <div>
+                    <img
+                      class="img-fluid mt-2"
+                      src="https://k.nooncdn.com/cms/pages/20211108/cdd08046977b5339dcbb41ad94c0577b/en_free-delivery-pdp.gif"
+                      alt=""
+                    />
+                  </div>
+                  <!-- Cart Part -->
+                  <!-- TODO: NProduct option [color , size ] + animation + redirect -->
+                  <div class="container-fluid my-4 ms-0 ps-0">
+                    <div class="row">
+                      <!-- Quantity -->
+                      <div class="col-2 me-0">
+                        <select id="Quantity" class="p-2 fs-4" [(ngModel)]="ProductQuantity">
+                          <!-- <option value="1" selected="true">1</option> -->
+                          <option *ngFor="let n of maxCountArr" value="{{n}}">{{n}}</option>
+                        </select>
+                      </div>
+                      <!-- Add to Cart -->
+                      <div class="col-8 px-0">
+                        <button id="addToCart" class="btn badge ms-3 w-100 h-100" (click)="AddToCart()">
+                          Add to Cart
+                        </button>
+                      </div>
+                      <!-- Add to Favourite -->
+                      <div class="col-2">
+                        <button class="love fs-2 ps-2 btn btn-defualt ms-2" (click)="AddToWishList()">
+                          <i class="like fa-solid fa-heart fs-1" [ngClass]="{'inwishlist':isInwishlist }" value="0"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Shipper Informations -->
+          <div class="col-xl-4">
+            <!-- Free return -->
+            <div>
+              <span class="text-muted fs-6"
+                ><img class="icon me-2" src="https://z.nooncdn.com/s/app/com/noon/icons/free_returns.svg" alt="" />Enjoy
+                hassle free returns with this offer. <a class="noonLink" href="#">Learn more </a>
+              </span>
+            </div>
+            <hr />
+            <!-- Sold by -->
+            <div>
+              <span class="text-muted fs-6"
+                ><img class="icon me-2" src="https://z.nooncdn.com/s/app/com/noon/icons/seller.svg" alt="" />Sold by
+                <a class="noonLink" href="#">{{selectedProduct.sellerName}}</a>
+              </span>
+            </div>
+            <hr />
+            <!-- Seller Review -->
+            <div>
+              <span class="me-3">Seller Reviews</span>
+              <span class="badge bg-success mx-1"
+                >{{totalSellerReviewRating}} <i class="fa fa-star text-light"></i>
+              </span>
+              <span id="productCountReview" class="ms-5 fw-bold">{{totalSellerReviewCount}}</span><br /><span
+                class="text-muted"
+                >How are these calculated?
+                <img class="icon" src="https://z.nooncdn.com/s/app/com/noon/icons/help_v2.svg"
+              /></span>
+            </div>
+            <hr />
+            <!-- Instruction -->
+            <div class="container-fluid ps-0">
+              <!-- info-1 -->
+              <div id="info-1" class="row">
+                <div class="mb-4 me-0" style="width: 50px;">
+                  <img src="https://z.nooncdn.com/s/app/com/noon/icons/free_returns_usp.svg" alt="" />
+                </div>
+                <div class="col-sm-10">
+                  <div class="fw-bolder">FREE RETURNS</div>
+                  <div class="text-muted">Get free returns on eligible items</div>
+                </div>
+              </div>
+              <!-- info-2 -->
+              <div id="info-2" class="row">
+                <div class="mb-4 me-0" style="width: 50px;">
+                  <img src="https://z.nooncdn.com/s/app/com/noon/icons/trusted_shipping_usp_v2.svg" alt="" />
+                </div>
+                <div class="col-sm-10">
+                  <div class="fw-bolder">TRUSTED SHIPPING</div>
+                  <div class="text-muted">Free shipping when you spend EGP 350 and above</div>
+                </div>
+              </div>
+              <!-- info-3 -->
+              <div id="info-3" class="row">
+                <div class="mb-4 me-0" style="width: 50px;">
+                  <img src="https://z.nooncdn.com/s/app/com/noon/icons/secure_usp.svg" alt="" />
+                </div>
+                <div class="col-sm-10">
+                  <div class="fw-bolder">SECURE SHOPPING</div>
+                  <div class="text-muted">Your data is always protected</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Product Informations -->
+      <div class="col-12">
+        <!-- Title -->
+        <div class="bg-light">
+          <ng-container *ngIf="selectedProduct.highlights ||selectedProduct.specifications">
+            <span
+              #overview
+              id="overview"
+              class="btn fs-4"
+              [ngClass]="{'infoLink':isOverview}"
+              (click)="showProInfo(overview)"
+              >Overview</span
+            >
+          </ng-container>
+          <ng-container *ngIf="selectedProduct.specifications&&selectedProduct.specifications.length >8">
+            <span #spec id="spec" class="btn fs-4" [ngClass]="{'infoLink':isSpec}" (click)="showProInfo(spec)"
+              >Specifications</span
+            >
+          </ng-container>
+          <ng-container *ngIf="productReviews && productReviews.length >0">
+            <span #review id="review" class="btn fs-4" [ngClass]="{'infoLink':isReview}" (click)="showProInfo(review)"
+              >Review</span
+            >
+          </ng-container>
+        </div>
+        <!-- Content -->
+        <div class="my-4">
+          <!-- overview -->
+          <app-overview
+            *ngIf="isOverview"
+            [chSelectedProduct]="selectedProduct"
+            (eventFullSpecDetails)="goFullSpecDetails()"
+          ></app-overview>
+          <!-- Specifications -->
+          <app-specifications *ngIf="isSpec" [chSelectedProduct]="selectedProduct"></app-specifications>
+          <!-- Reveiws -->
+          <app-reviews *ngIf="isReview" [chSelectedProduct]="selectedProduct"></app-reviews>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Footer -->
+<app-home-footer></app-home-footer>

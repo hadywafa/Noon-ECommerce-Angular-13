@@ -1,0 +1,156 @@
+*{
+    box-sizing: border-box;
+  
+  }
+  body{
+      background-color: #f7f7fa;
+     
+  }
+  
+  .cart{
+      background-color: #fff;
+  }
+  
+  .rightside{
+      border: 1px solid rgba(198, 204, 221, 0.5);
+  }
+  
+  .navleft ul{
+   list-style: none;
+   background-color: transparent
+  }
+  .navleft ul{
+      list-style: none;
+     }
+     
+     .navleft li{
+      margin-top: 25px;
+      padding: 5px;
+     }
+     .navleft li:hover{
+     background-color: #fff;
+     transform: scale(1.1);
+     }
+     .navleft li img{
+      margin-right: 15px;
+     }
+  
+  .headprofile{
+      background: rgb(241, 243, 250);
+  }
+  .headaddress {
+    background-color: #F3FAA3;
+    --bs-gutter-x: 0;
+  }
+    
+  .profile input ,.profile select{
+      border: none;
+     border-bottom:1px solid #777;
+  }
+  .divimg{
+    height: 100%;
+    width: 100%;
+  }
+  .divimg img{
+      height: 100%;
+      width: 100%;
+    }
+    a{
+      text-decoration: none;
+      color: #000;
+      font-size: 18px;
+      font-weight: bold;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+  
+    @media only screen and (max-width: 600px) {
+      .navleft {
+         width: 0px;
+         display: none;
+         
+         }
+       .row{
+         margin: auto;
+       }
+         .divimg{
+          height: 50%;
+          width: 50%;
+        }
+     
+    }
+  
+    @media only screen and (min-width: 600px ) and ( max-width: 968px) {
+      .navleft {
+         width: 0px;
+         display: none;
+          
+          }
+   
+          .row{
+            margin: auto;
+          }
+          .divimg{
+           height: 50%;
+           width: 50%;
+         }
+    }
+
+    .pop{
+      background-color: rgba( #000000 ,.8);
+      z-index: 9;
+          width: 100%;
+          height: 100%;
+        position:absolute;
+      top :0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+    .close{
+      font-weight: bold;
+       font-size: 24px;
+       
+    }
+    .header{
+      width: 500px;
+      position: fixed;
+      background-color: #F3FAA3;
+      top: 10%;
+         left: 30%;
+         padding: 10px;
+         border-top-left-radius:10px;
+         border-top-right-radius: 10px ;
+         text-align: center;
+         color: #333;
+    }
+    .updateAddress,.addAddress{ 
+        background-color:#fff;
+        border: 1px solid #fff;
+        border-radius: 10px;
+        z-index: 99;
+       padding: 10px;
+
+        width: 500px;
+        position: absolute;
+         top: 10%;
+         left: 30%;
+     
+    }
+    .spanaddress{
+      text-decoration: underline;
+      font-size: 18px;
+      cursor: pointer;
+      font-weight: 500;
+    }
+    mat-spinner{
+      margin: auto;
+      text-align: center;
+   z-index: 99;
+     opacity: 0.8;
+     width: 100%;
+     height: 100%;
+     position: absolute;
+     top: 50%;
+     left: 50%;
+    }
+    

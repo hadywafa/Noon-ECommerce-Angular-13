@@ -1,0 +1,93 @@
+{
+
+
+
+  "userprofileLinks": {
+    "order": "الطلبيات",
+    "Address": "العناوين",
+    "return": "المرتجعات",
+    "profile": "حسابي",
+    "payment": "الدفع"
+
+  },
+
+  "userprofile": {
+    "generalInfo": "المعلومات العامة",
+    "security": "الامان",
+    "firstName": "الاسم الاول",
+    "lastName": "اسم العائلة",
+    "preferdLang": "اللغة المفضلة",
+    "email": "الحساب الالكتروني",
+    "password": "كلمة المرور",
+    "save": "حفظ",
+    "changepassword": "تغير كلمة المرور",
+    "cpassword": "كلمة المرور الحالية",
+    "npassword": "كلمة المرور الجديدة",
+    "update": "تعديل",
+    "ar": "العربية",
+    "en": "English"
+  },
+  "userAddress": {
+    "Addresses": "العناوين",
+    "PrimaryAddress": "العنوان الرئيسي",
+    "OtherAddress": "عنوان اخر",
+    "Home": "الرئيسي",
+    "Name": "الاسم",
+    "Address": "العنوان",
+    "descrip": "تعرف على كيفية إدارة عنوانك وتحقق من تحديث حالة في عنوانك",
+    "PhoneNumber": "رقم الهاتف",
+    "newAddress": " اضافة عنوان جديد",
+    "new": "اضافة",
+    "updateAddress": " تعديل عنوان",
+    "update": "تعديل",
+    "default": "العنوان الاساسي",
+    "street": "الشارع",
+    "city": "المدينة",
+    "postalCode": "رقم البريد"
+  },
+  "userReturn": {
+    "Return": "المرتجعات",
+    "ReturnId": "رقم المرتجع",
+    "Address": "العنوان",
+    "Approved": "موافق",
+    "Express": "ارسال سريع",
+    "RefundMethod": "طريقة السداد",
+    "tax": "الائتمان الضريبي"
+  },
+  "userorder": {
+    "order": "طلبي",
+    "Dileveried": "تم التوصيل",
+    "Review": "تقييم هذا الطلب",
+    "descrip": "تعرف على كيفية إدارة طلبك وتحقق من تحديث حالة في طلبك"
+  },
+
+  "Header": {
+    "Sign": "تسجيل الدخول",
+    "Cart": "عربة التسوق",
+    "Search": "انت بتدور علي ايه؟",
+    "AllProducts": "جميع المنتجات"
+  },
+  "Pagination": {
+    "Next": "التالي",
+    "Previous": "السابق"
+  },
+  "Cart": {
+    "ContinueShopping": "متابعة التسوق",
+    "Remove": "حذف"
+  },
+
+  "orderSummery": {
+    "OrderSummary": "ملخص الطلبية",
+    "free": "مجانا",
+    "subtotatl": "المجموع الفرعي",
+    "Total": "المجموع يشمل ضريبة القيمة المضافة",
+    "descripe": "خطط الدفع الشهرية تبدأ من جنيه500",
+    "detailes": "تفاصيل الشحن",
+    "chackOut": "أتمام الشراء",
+    "applay":"تطبيق",
+    "copon":"ادخل كود الخصم",
+    "shipping":"معلومات الشحن",
+    "quantity":"الكمية",
+    "price":"السعر"
+  }
+}

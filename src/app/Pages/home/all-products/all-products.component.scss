@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700");
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.product-card {
+  width: 250px;
+  position: relative;
+}
+mat-spinner {
+  margin: auto;
+  text-align: center;
+  z-index: 99;
+  opacity: 0.8;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  stroke: #000;
+}
+
+.pop {
+  background-color: rgba(#fff, 0.8);
+  z-index: 9;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+}
+
+.product-tumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-tumb img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.product-details {
+  padding: 5px;
+}
+
+.product-details h5 {
+  font-weight: 400;
+  display: block;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  color: #363636;
+  text-decoration: none;
+  transition: 0.3s;
+  text-align: center;
+}
+
+.product-details p {
+  font-size: 15px;
+  line-height: 22px;
+  margin-bottom: 18px;
+  color: dimgrey;
+  text-align: center;
+}
+
+.product-bottom-details {
+  overflow: hidden;
+  text-align: center;
+  color: #363636;
+}
+
+// @media only screen and (max-width: 799px) and (min-width: 0px) {
+//   .product-card {
+//     width: 100px;
+//     position: relative;
+//   }
+
+//   .product-details p {
+//     font-size: 13px;
+//     line-height: 15px;
+//     margin-bottom: 5px;
+//     color: #999;
+//   }
+
+//   .product-details h5 {
+//     font-weight: 400;
+//     display: block;
+//     margin-bottom: 10px;
+//     text-transform: uppercase;
+//     color: #363636;
+//     text-decoration: none;
+//     transition: 0.3s;
+//     text-align: center;
+//   }
+
+//   .product-bottom-details {
+//     overflow: hidden;
+//     text-align: center;
+//     color: #363636;
+//   }
+
+//   .page {
+//     margin-top: 50px;
+//     margin-bottom: 100px;
+//     margin-left: 10px;
+//   }
+// }
+
+// @media only screen and (max-width: 999px) and (min-width: 800px) {
+//   .product-card {
+//     width: 200px;
+//     position: relative;
+//   }
+
+//   .page {
+//     margin-top: 50px;
+//     margin-bottom: 100px;
+//     margin-left: 200px;
+//   }
+// }
+
+// @media only screen and (max-width: 1500px) and (min-width: 1000px) {
+//   .product-card {
+//     width: 250px;
+//     position: relative;
+//   }
+
+//   .page {
+//     margin-top: 50px;
+//     margin-bottom: 100px;
+//     margin-left: 300px;
+//   }
+// }

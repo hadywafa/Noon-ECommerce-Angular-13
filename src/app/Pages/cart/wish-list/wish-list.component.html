@@ -1,0 +1,28 @@
+<div class="mt-5 mb-5 ">
+  <div id="wishlist">
+    <div class="cart">
+      <div class="header p-1" id="headerwishlist">
+        <h3>WishList</h3>
+      </div>
+      <div *ngFor="let item of ListProduct">
+        <div class="row p-4">
+          <div class="col-lg-2">
+            <img [src]="item.product.imageThumb" class="img-fluid" />
+          </div>
+          <div class="col-lg-7">
+            <p>{{lang=="en"?item.product.name:item.product.nameArabic}}</p>
+            <p>{{lang=="en"?item.product.description:item.product.descriptionAr}}</p>
+            <p>Price: {{item.product.price-(item.product.price*item.product.discount)}}</p>
+
+          </div>
+          <div class="col-lg-3 text-center">
+
+            <button class="btn btn-danger mt-4" (click)="deletewishlist(item.product.id)">
+              {{'Cart.Remove'|translate}}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

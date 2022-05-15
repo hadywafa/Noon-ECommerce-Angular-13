@@ -4,7 +4,10 @@
 
 export const environment = {
   production: false,
-  APIBaseURL: "http://7699-53328.el-alt.com",
+  // APIBaseURL: "http://localhost:23146",
+  // APIBaseURL: "http://localhost:5050",
+  // APIBaseURL: "https://noon-api-app.herokuapp.com",
+  APIBaseURL: "http://www.hadywafa.somee.com",
 };
 
 /*

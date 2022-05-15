@@ -1,4 +1,0 @@
-Used Package Names :-
-1-jspn-server => npm install -g json-server 
-              => json-server --watch db.json
-2-credit card => npm i creditcardpayments 

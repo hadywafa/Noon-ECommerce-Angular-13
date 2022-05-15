@@ -1,16 +1,16 @@
-### For Preview
+# For Preview
 
-watching website via => https://noon-angular-6f6b5.web.app/egypt-en
+## watching website via => https://noon-angular-6f6b5.web.app/egypt-en
 
 you should allowed insecure content for that website in your browser because my api doesn't have https license
 for chrome browser you will do that is steps:-
-1-settings
-2-privacy and security
-3-site settings
-4-insecure content
-5-allow insecure content 
+1-settings.
+2-privacy and security.
+3-site settings.
+4-insecure content.
+5-allow insecure content. 
 
-# Noon
+## Noon
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.1.
 

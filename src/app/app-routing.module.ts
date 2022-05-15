@@ -27,7 +27,7 @@ const routes: Routes = [
   { path: "egypt-en/cart/order", component: OrderComponent, canActivate: [AuthGuard] },
   { path: "egypt-en/cart/order/payment", component: PaymentComponent, canActivate: [AuthGuard] },
   { path: "egypt-en/cart", component: CartComponent },
-  { path: "egypt-en/:cCode", component: CategoryProductsComponent, canActivate: [AuthGuard] },
+  { path: "egypt-en/:cCode", component: CategoryProductsComponent },
   { path: "egypt-en/OrderDetails/:pid", component: OrderDetailsComponent, canActivate: [AuthGuard] },
   { path: "ErrorPage", component: NotFoundComponent },
   { path: "**", component: NotFoundComponent },

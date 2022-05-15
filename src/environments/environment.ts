@@ -7,7 +7,8 @@ export const environment = {
   // APIBaseURL: "http://localhost:23146",
   // APIBaseURL: "http://localhost:5050",
   // APIBaseURL: "https://noon-api-app.herokuapp.com",
-  APIBaseURL: "http://www.hadywafa.somee.com",
+  // APIBaseURL: "https://localhost:44331",
+  APIBaseURL: "http://hadywafa.somee.com",
 };
 
 /*
